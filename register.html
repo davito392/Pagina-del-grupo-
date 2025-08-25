@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="static/register.css">
+</head>
+<body>
+
+   <section class="form-register">
+    <h4>Formulario Para Registrarse</h4>
+    <form method="POST">
+        <input class="controls" name="nombres" id="nombres" placeholder="Ingrese Su Nombre" required>
+        <input class="controls" name="apellidos" id="apellidos" placeholder="Ingrese Su Apellido" required>
+        <input class="controls" name="correo" id="correo" placeholder="Ingrese Su Correo" type="email" required>
+        <input class="controls" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña" type="password" required>
+        <div class="terms">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">Estoy de acuerdo con los <a href="#">Términos y Condiciones</a></label>
+        </div>
+        <input class="botons" type="submit" value="Registrarse">
+    </form>
+    <p><a href="login.html">¿Ya Tienes Cuenta?</a></p>
+</section>
+
+</body>
+</html>

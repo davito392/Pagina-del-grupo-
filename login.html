@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <section class="form-register">
+        <h2 class="logo">🔒 CreateLock</h2>
+        <h4>Ingrese sus datos</h4>
+        <form method="POST" action="{{ url_for('login') }}">
+            <input class="controls" name="email" id="correo" placeholder="Ingrese su correo" required>
+            <input class="controls" name="password" id="nombres" placeholder="Ingrese su contraseña" type="password" required>
+            <div class="terms">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">Estoy de acuerdo con los <a href="#">Términos y Condiciones</a></label>
+            </div>
+            {% if error %}
+                <p class="feedback">{{ error }}</p>
+            {% endif %}
+            <input class="botons" type="submit" value="Iniciar Sesión" id="loginButton">
+        </form>
+        <p class="register-link">¿No tienes cuenta? <a href="{{ url_for('register') }}">Regístrate aquí</a></p>
+    </section>
+</body>
+</html>
+
